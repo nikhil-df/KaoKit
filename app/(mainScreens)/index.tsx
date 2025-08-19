@@ -1,4 +1,4 @@
-import { useAppStyles } from "@/components/constants/styleSheet";
+import { useAppStyles } from "@/constants/styleSheet";
 import { Text, View } from "react-native";
 
 export default function Index() {
