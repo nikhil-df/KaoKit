@@ -10,9 +10,9 @@ const CustomTabBarButton = forwardRef<any, any>((props, ref) => (
     ref={ref}
     android_ripple={null}
     style={({ pressed }) => [
-      { 
-        flex: 1, 
-        justifyContent: 'center', 
+      {
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
         paddingVertical: 12,  // Add vertical padding for better centering
       },
@@ -50,29 +50,37 @@ export default function TabLayout() {
         tabBarButton: (props) => <CustomTabBarButton {...props} />,
       }}
     >
-      <Tabs.Screen 
-        name="index" 
+      <Tabs.Screen
+        name="index"
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons name="home" color={color} size={26} />
           ),
-        }} 
+        }}
       />
-      <Tabs.Screen 
-        name="favorite" 
+      <Tabs.Screen
+        name="competition"
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="ladder" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="favorite"
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons name="bookmark" color={color} size={26} />
           ),
-        }} 
+        }}
       />
-      <Tabs.Screen 
-        name="ownKao" 
+      <Tabs.Screen
+        name="ownKao"
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons name="puzzle-edit" color={color} size={26} />
           ),
-        }} 
+        }}
       />
     </Tabs>
   );
